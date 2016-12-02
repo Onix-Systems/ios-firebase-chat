@@ -1,0 +1,27 @@
+platform :ios, '10.0'
+
+use_frameworks!
+
+def available_pods
+
+pod 'FBSDKLoginKit'
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Facebook'
+pod 'FirebaseUI/Twitter'
+pod 'FirebaseUI/Google'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+pod 'RxCocoa', '3.0.1'
+
+end
+
+app_targets = ['OnixFirebaseChat', 'OnixFirebaseChatTests']
+
+app_targets.each do |app_target|
+    target app_target do
+        available_pods
+    end
+end
