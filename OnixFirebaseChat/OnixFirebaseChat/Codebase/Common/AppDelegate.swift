@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  OnixFirebaseChat
 //
@@ -12,13 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var app: ONXFirebaseChat?
+    var appInstance: ONXFirebaseChat?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if let window = window {
-            app = ONXFirebaseChat(window: window)
+            appInstance = ONXFirebaseChat(window: window)
         }
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        if let appInstance = appInstance {
+            return appInstance.application(app, open: url, options: options)
+        }
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

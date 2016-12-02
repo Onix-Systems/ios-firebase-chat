@@ -7,14 +7,54 @@
 //
 
 import UIKit
-import Firebase
+import RxSwift
 
 final class ONXFirebaseChat {
-
+    
+    private let firebaseService = ONXFirebaseService()
+    private let disposeBag = DisposeBag()
+    
+    private var tabBarController:UITabBarController!
+    
     init(window: UIWindow) {
+        tabBarController = window.rootViewController as! UITabBarController
+        tabBarController.view.backgroundColor = UIColor.white
+        
         configure()
     }
     
     private func configure(){
+        firebaseService.configure()
+        firebaseService.subject.asObservable()
+            .subscribe(onNext: { (auth) in
+                if let auth = auth,
+                    let currentUser = auth.currentUser {
+                    self.enterApp()
+                } else {
+                    self.logout()
+                    self.presentAuthController()
+                }
+                
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    func presentAuthController(){
+        DispatchQueue.main.async {
+            if let controller = self.firebaseService.signInViewController {
+                self.tabBarController.present(controller, animated: true)
+            }
+        }
+    }
+    
+    func enterApp() {
+        tabBarController.viewControllers = []
+    }
+    func logout(){
+        tabBarController.viewControllers = []
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return firebaseService.application(app, open: url, options: options)
     }
 }
