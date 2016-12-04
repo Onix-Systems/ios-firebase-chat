@@ -18,19 +18,22 @@ import TwitterKit
 
 final class ONXFirebaseService: NSObject {
     
-    var subject:Variable<FIRAuth?> = Variable<FIRAuth?>(nil)
+    var subject:PublishSubject<FIRAuth?> = PublishSubject<FIRAuth?>()
     private let disposeBag = DisposeBag()
     
-    override init(){
-        super.init()
+    private func subscribe(){
         just(element: FUIAuth.defaultAuthUI()?.auth)
-            .bindTo(subject)
+            //TODO: - find why bindto stops subject after subscription and try to replace .subscribe to .bindTo
+            .subscribe(onNext: { (auth) in
+                self.subject.on(.next(auth))
+            })
             .addDisposableTo(disposeBag)
     }
     
     func configure(){
         Twitter.sharedInstance().start(withConsumerKey: Constants.TwitterCredentials.consumerKey, consumerSecret: Constants.TwitterCredentials.consumerSecret)
         FIRApp.configure()
+        subscribe()
     }
     
     var signInViewController:UIViewController? {
@@ -49,9 +52,9 @@ final class ONXFirebaseService: NSObject {
     func logout(){
         do {
             try FUIAuth.defaultAuthUI()?.signOut()
-            subject.value = nil
+            subject.on(.next(nil))
         } catch let error {
-            print("error:\(error.localizedDescription)")
+            subject.on(.error(error))
         }
     }
     
@@ -69,9 +72,9 @@ extension ONXFirebaseService: FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
-            print("Error description:\(error.localizedDescription)")
+            subject.on(.error(error))
         }
-        self.subject.value = authUI.auth
+        subject.on(.next(authUI.auth))
     }
     
     func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {

@@ -24,8 +24,7 @@ final class ONXFirebaseChat {
     }
     
     private func configure(){
-        firebaseService.configure()
-        firebaseService.subject.asObservable()
+        firebaseService.subject
             .subscribe(onNext: { (auth) in
                 if let auth = auth,
                     let currentUser = auth.currentUser {
@@ -34,9 +33,12 @@ final class ONXFirebaseChat {
                     self.logout()
                     self.presentAuthController()
                 }
-                
+            }, onError: { (error) in
+                //TODO: - pass error to UI error handler
+                print(error)
             })
             .addDisposableTo(disposeBag)
+        firebaseService.configure()
     }
     
     func presentAuthController(){
