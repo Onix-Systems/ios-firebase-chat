@@ -21,7 +21,7 @@ final class ONXFirebaseService: NSObject {
     var subject:PublishSubject<FIRAuth?> = PublishSubject<FIRAuth?>()
     private let disposeBag = DisposeBag()
     
-    private func subscribe(){
+    private func subscribe() {
         just(element: FUIAuth.defaultAuthUI()?.auth)
             //TODO: - find why bindto stops subject after subscription and try to replace .subscribe to .bindTo
             .subscribe(onNext: { (auth) in
@@ -30,7 +30,7 @@ final class ONXFirebaseService: NSObject {
             .addDisposableTo(disposeBag)
     }
     
-    func configure(){
+    func configure() {
         Twitter.sharedInstance().start(withConsumerKey: Constants.TwitterCredentials.consumerKey, consumerSecret: Constants.TwitterCredentials.consumerSecret)
         FIRApp.configure()
         subscribe()
@@ -49,7 +49,7 @@ final class ONXFirebaseService: NSObject {
         }
     }
     
-    func logout(){
+    func logout() {
         do {
             try FUIAuth.defaultAuthUI()?.signOut()
             subject.on(.next(nil))
@@ -58,7 +58,7 @@ final class ONXFirebaseService: NSObject {
         }
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    func application(open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
         if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
             return true

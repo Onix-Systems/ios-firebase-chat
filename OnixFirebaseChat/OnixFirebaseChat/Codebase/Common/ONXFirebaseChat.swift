@@ -23,7 +23,7 @@ final class ONXFirebaseChat {
         configure()
     }
     
-    private func configure(){
+    private func configure() {
         firebaseService.subject
             .subscribe(onNext: { (auth) in
                 if let auth = auth,
@@ -41,7 +41,7 @@ final class ONXFirebaseChat {
         firebaseService.configure()
     }
     
-    func presentAuthController(){
+    func presentAuthController() {
         DispatchQueue.main.async {
             if let controller = self.firebaseService.signInViewController {
                 self.tabBarController.present(controller, animated: true)
@@ -52,11 +52,11 @@ final class ONXFirebaseChat {
     func enterApp() {
         tabBarController.viewControllers = []
     }
-    func logout(){
+    func logout() {
         tabBarController.viewControllers = []
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        return firebaseService.application(app, open: url, options: options)
+        return firebaseService.application(open: url, options: options)
     }
 }
