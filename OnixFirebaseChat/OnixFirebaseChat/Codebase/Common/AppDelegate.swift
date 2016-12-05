@@ -12,17 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var screenManager: ONXFirebaseChat?
+    var basisController: ONXFirebaseChat?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if let window = window {
-            screenManager = ONXFirebaseChat(window: window)
+            basisController = ONXFirebaseChat(window: window)
         }
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        if let screenManager = screenManager {
+        if let screenManager = basisController {
             return screenManager.application(app, open: url, options: options)
         }
         return false
