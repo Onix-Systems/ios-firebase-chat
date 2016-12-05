@@ -12,11 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var basisController: ONXFirebaseChat?
+    var basisController: ONXBasisController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if let window = window {
-            basisController = ONXFirebaseChat(window: window)
+            basisController = ONXBasisController(window: window)
         }
         return true
     }

@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-final class ONXFirebaseChat {
+final class ONXBasisController {
     
     private let firebaseService = ONXFirebaseService()
     private let disposeBag = DisposeBag()

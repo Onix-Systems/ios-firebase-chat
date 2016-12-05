@@ -17,7 +17,7 @@
 		3497C5BC1DF18AAD0009A9ED /* ONXFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497C5BB1DF18AAD0009A9ED /* ONXFirebaseService.swift */; };
 		3497C5BE1DF18AD50009A9ED /* ONXReactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497C5BD1DF18AD50009A9ED /* ONXReactive.swift */; };
 		3497C5C01DF18D510009A9ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3497C5BF1DF18D510009A9ED /* GoogleService-Info.plist */; };
-		34E409A21DF1743C008BD8FB /* ONXFirebaseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E409A11DF1743C008BD8FB /* ONXFirebaseChat.swift */; };
+		34E409A21DF1743C008BD8FB /* ONXBasisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E409A11DF1743C008BD8FB /* ONXBasisController.swift */; };
 		34E409A41DF174F1008BD8FB /* ONXAlertRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E409A31DF174F1008BD8FB /* ONXAlertRenderer.swift */; };
 		6E0745BF9DCF8A24D9183129 /* Pods_OnixFirebaseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3327ABF445E0CA46A75F60EC /* Pods_OnixFirebaseChatTests.framework */; };
 		F532B15F6107E6859F587B85 /* Pods_OnixFirebaseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9210C2B1FE20B20426ADF76B /* Pods_OnixFirebaseChat.framework */; };
@@ -51,7 +51,7 @@
 		3497C5BD1DF18AD50009A9ED /* ONXReactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXReactive.swift; path = Codebase/Common/Helpers/ONXReactive.swift; sourceTree = "<group>"; };
 		3497C5BF1DF18D510009A9ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3497C5C11DF191100009A9ED /* OnixFirebaseChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnixFirebaseChat.entitlements; sourceTree = "<group>"; };
-		34E409A11DF1743C008BD8FB /* ONXFirebaseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXFirebaseChat.swift; path = Codebase/Common/ONXFirebaseChat.swift; sourceTree = "<group>"; };
+		34E409A11DF1743C008BD8FB /* ONXBasisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXBasisController.swift; path = Codebase/Common/ONXBasisController.swift; sourceTree = "<group>"; };
 		34E409A31DF174F1008BD8FB /* ONXAlertRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXAlertRenderer.swift; path = Codebase/Common/Helpers/ONXAlertRenderer.swift; sourceTree = "<group>"; };
 		46127B92727B5DC8B4D4F768 /* Pods-OnixFirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnixFirebaseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnixFirebaseChat/Pods-OnixFirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
 		7AE1931FD954539E9DCA6B9E /* Pods-OnixFirebaseChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnixFirebaseChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnixFirebaseChatTests/Pods-OnixFirebaseChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 			children = (
 				24103F031DF06DDC001D3ED4 /* AppDelegate.swift */,
 				34E409A01DF173CD008BD8FB /* Helpers */,
-				34E409A11DF1743C008BD8FB /* ONXFirebaseChat.swift */,
+				34E409A11DF1743C008BD8FB /* ONXBasisController.swift */,
 				346F28291DF1D38F0049C4F0 /* Constants.swift */,
 			);
 			name = Common;
@@ -433,7 +433,7 @@
 				3497C5BE1DF18AD50009A9ED /* ONXReactive.swift in Sources */,
 				34E409A41DF174F1008BD8FB /* ONXAlertRenderer.swift in Sources */,
 				24103F041DF06DDC001D3ED4 /* AppDelegate.swift in Sources */,
-				34E409A21DF1743C008BD8FB /* ONXFirebaseChat.swift in Sources */,
+				34E409A21DF1743C008BD8FB /* ONXBasisController.swift in Sources */,
 				346F282A1DF1D38F0049C4F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
