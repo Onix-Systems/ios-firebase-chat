@@ -218,6 +218,7 @@
 				24103EFE1DF06DDC001D3ED4 /* Resources */,
 				0A439EDA4C54FD4E3351A80C /* [CP] Embed Pods Frameworks */,
 				CEB9BF3DC8D3A11C0EA6BC42 /* [CP] Copy Pods Resources */,
+				34FD53C31DF6BA7A0085408D /* ShellScript */,
 				346F28261DF1AB7A0049C4F0 /* ShellScript */,
 			);
 			buildRules = (
@@ -346,6 +347,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 71b87d4516d60ca4803f075498a8b283db3c13d3 289d003c56f0db9f78ee8728e8865b1d21d6fe6d9d7e9f7c698bd550899b3982";
+		};
+		34FD53C31DF6BA7A0085408D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint lint --strict || exit 3\nelse\necho \"SwiftLint does not exist\" >&2\nexit 1\nfi";
 		};
 		47F2CDC93D50B2D409097AFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
