@@ -1,4 +1,4 @@
- //
+//
 //  AppDelegate.swift
 //  OnixFirebaseChat
 //
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-    
+
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         if let screenManager = basisController {
             return screenManager.application(app, open: url, options: options)
@@ -50,6 +50,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-
