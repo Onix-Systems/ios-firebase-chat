@@ -1,1 +1,1 @@
-# onix-firebase-chat-ios
+# ios-firebase-chat
