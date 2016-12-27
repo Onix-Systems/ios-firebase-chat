@@ -17,6 +17,12 @@
 		3497C5BC1DF18AAD0009A9ED /* ONXFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497C5BB1DF18AAD0009A9ED /* ONXFirebaseService.swift */; };
 		3497C5BE1DF18AD50009A9ED /* ONXReactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497C5BD1DF18AD50009A9ED /* ONXReactive.swift */; };
 		3497C5C01DF18D510009A9ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3497C5BF1DF18D510009A9ED /* GoogleService-Info.plist */; };
+		34A7B7EC1DF8355900A9FB63 /* ONXGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7EB1DF8355900A9FB63 /* ONXGroupListViewController.swift */; };
+		34A7B7EE1DF835B600A9FB63 /* ONXGroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7ED1DF835B600A9FB63 /* ONXGroupListViewModel.swift */; };
+		34A7B7F01DF84C0C00A9FB63 /* ONXAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7EF1DF84C0C00A9FB63 /* ONXAppearance.swift */; };
+		34A7B7F21DF8505500A9FB63 /* ONXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7F11DF8505500A9FB63 /* ONXColors.swift */; };
+		34A7B7F41DF8541000A9FB63 /* ONXCreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7F31DF8541000A9FB63 /* ONXCreateGroupViewController.swift */; };
+		34A7B7F61DF8544500A9FB63 /* ONXCreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7B7F51DF8544500A9FB63 /* ONXCreateGroupViewModel.swift */; };
 		34E409A21DF1743C008BD8FB /* ONXBasisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E409A11DF1743C008BD8FB /* ONXBasisController.swift */; };
 		34E409A41DF174F1008BD8FB /* ONXAlertRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E409A31DF174F1008BD8FB /* ONXAlertRenderer.swift */; };
 		34FD53C61DF6DB030085408D /* Chats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FD53C41DF6DB030085408D /* Chats.storyboard */; };
@@ -58,6 +64,12 @@
 		3497C5BD1DF18AD50009A9ED /* ONXReactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXReactive.swift; path = Codebase/Common/Helpers/ONXReactive.swift; sourceTree = "<group>"; };
 		3497C5BF1DF18D510009A9ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3497C5C11DF191100009A9ED /* OnixFirebaseChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnixFirebaseChat.entitlements; sourceTree = "<group>"; };
+		34A7B7EB1DF8355900A9FB63 /* ONXGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXGroupListViewController.swift; path = Codebase/ViewControllers/Groups/ONXGroupListViewController.swift; sourceTree = "<group>"; };
+		34A7B7ED1DF835B600A9FB63 /* ONXGroupListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXGroupListViewModel.swift; path = Codebase/ViewControllers/Groups/ONXGroupListViewModel.swift; sourceTree = "<group>"; };
+		34A7B7EF1DF84C0C00A9FB63 /* ONXAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXAppearance.swift; path = Codebase/Common/Helpers/ONXAppearance.swift; sourceTree = "<group>"; };
+		34A7B7F11DF8505500A9FB63 /* ONXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXColors.swift; path = Codebase/Common/Helpers/ONXColors.swift; sourceTree = "<group>"; };
+		34A7B7F31DF8541000A9FB63 /* ONXCreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXCreateGroupViewController.swift; path = Codebase/ViewControllers/Groups/ONXCreateGroupViewController.swift; sourceTree = "<group>"; };
+		34A7B7F51DF8544500A9FB63 /* ONXCreateGroupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXCreateGroupViewModel.swift; path = Codebase/ViewControllers/Groups/ONXCreateGroupViewModel.swift; sourceTree = "<group>"; };
 		34E409A11DF1743C008BD8FB /* ONXBasisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXBasisController.swift; path = Codebase/Common/ONXBasisController.swift; sourceTree = "<group>"; };
 		34E409A31DF174F1008BD8FB /* ONXAlertRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ONXAlertRenderer.swift; path = Codebase/Common/Helpers/ONXAlertRenderer.swift; sourceTree = "<group>"; };
 		34FD53C51DF6DB030085408D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chats.storyboard; sourceTree = "<group>"; };
@@ -212,6 +224,8 @@
 				34E409A31DF174F1008BD8FB /* ONXAlertRenderer.swift */,
 				3497C5BD1DF18AD50009A9ED /* ONXReactive.swift */,
 				34FD53CA1DF6DDD60085408D /* ONXStoryboard.swift */,
+				34A7B7EF1DF84C0C00A9FB63 /* ONXAppearance.swift */,
+				34A7B7F11DF8505500A9FB63 /* ONXColors.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -228,6 +242,10 @@
 			isa = PBXGroup;
 			children = (
 				34FD53D21DF6E00F0085408D /* ONXGroupsNavigationController.swift */,
+				34A7B7EB1DF8355900A9FB63 /* ONXGroupListViewController.swift */,
+				34A7B7ED1DF835B600A9FB63 /* ONXGroupListViewModel.swift */,
+				34A7B7F31DF8541000A9FB63 /* ONXCreateGroupViewController.swift */,
+				34A7B7F51DF8544500A9FB63 /* ONXCreateGroupViewModel.swift */,
 			);
 			name = Groups;
 			sourceTree = "<group>";
@@ -496,9 +514,15 @@
 				3497C5BE1DF18AD50009A9ED /* ONXReactive.swift in Sources */,
 				34E409A41DF174F1008BD8FB /* ONXAlertRenderer.swift in Sources */,
 				34FD53DB1DF6EBCE0085408D /* ONXMoreNavigationController.swift in Sources */,
+				34A7B7F21DF8505500A9FB63 /* ONXColors.swift in Sources */,
 				24103F041DF06DDC001D3ED4 /* AppDelegate.swift in Sources */,
+				34A7B7EC1DF8355900A9FB63 /* ONXGroupListViewController.swift in Sources */,
 				34E409A21DF1743C008BD8FB /* ONXBasisController.swift in Sources */,
+				34A7B7F41DF8541000A9FB63 /* ONXCreateGroupViewController.swift in Sources */,
+				34A7B7F61DF8544500A9FB63 /* ONXCreateGroupViewModel.swift in Sources */,
+				34A7B7EE1DF835B600A9FB63 /* ONXGroupListViewModel.swift in Sources */,
 				34FD53D31DF6E00F0085408D /* ONXGroupsNavigationController.swift in Sources */,
+				34A7B7F01DF84C0C00A9FB63 /* ONXAppearance.swift in Sources */,
 				346F282A1DF1D38F0049C4F0 /* Constants.swift in Sources */,
 				34FD53D91DF6EB360085408D /* ONXChatsNavigationController.swift in Sources */,
 			);
